@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Source+Sans+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* Start Search container */
+
+.search-container {
+
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1440px;
+
+
+
+}
+
+.search-container .inputFormSearch {
+    max-width: 100%;
+    font-size: 1.5em;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.search-container .btnForm {
+    font-size: 1.3em;
+    background-color: rgb(57, 185, 57);
+    color: white;
+    border-radius: 30px;
+    padding: 4px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bolder;
+
+}
+
+/* Last search container */
+
+/* Global Style */
+.GlobalStyleInputForm {
+    font-size: 1.5em;
+    border-radius: 5px;
+    border: 0.2px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+.GlobalCTA {
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 30px;
+    width: 100%;
+    color: white;
+    background-color: rgb(255, 85, 85);
+    border: none;
+    margin-top: 5px;
+    font-weight: bolder;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Global Style */
+
+/* Add form animation */
+.animationForm {}
+
+
+/* Last animation add */
+
+/* Start add form */
+
+.add-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 100%;
+    width: 900px;
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+
+}
+
+.add-container .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.add-container .formAdd {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-container .container-closeAdd {
+    position: absolute;
+    text-align: center;
+    background-color: rgb(46, 168, 46);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+/* Last add form */
+
+/* Show btn Add */
+
+.container-show-btnAdd {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+
+    z-index: -99;
+}
+
+.container-show-btnAdd .showAddForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    max-width: 100%;
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    position: relative;
+    z-index: 5;
+    top: 90%;
+    left: 88%;
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Last show btn add */
+
+/* start Table */
+.tableData {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.tableData table {
+    width: 100%;
+
+
+}
+
+.tableData th {
+    background-color: rgb(82, 114, 255);
+    padding: 10px;
+    color: white;
+}
+
+
+
+/* Last table */

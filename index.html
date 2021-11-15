@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary of Terminology</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div id="content">
+
+        <!-- Section Search -->
+        <section class="search-container">
+            <form action="" class="search-form">
+                <input type="text" class="inputFormSearch" placeholder="what are u looking for?" maxlength="15">
+                <input type="submit" class="btnForm" value="search">
+            </form>
+        </section>
+        <!-- Last Section search -->
+
+
+        <!-- Form add data -->
+        <section class="add-container" hidden > 
+          
+              
+                <div class="title">
+                <h1>add new terminology</h1>
+           
+            </div>
+            <form action="" class="formAdd" >
+                <input type="text" placeholder=" fill terminology.." class="inputAddTerminology GlobalStyleInputForm" maxlength="20">
+                <input type="text" placeholder="fill meaning..." maxlength="20" class="inputAddMeaning GlobalStyleInputForm">
+                <input type="submit" value="save" class="btnAddInput GlobalCTA">
+            </form>
+
+            <div class="container-closeAdd">
+                <h1 class="btnCloseAdd">X</h1>
+            </div>
+
+        </section>
+        <!-- Last add data -->
+
+        <section class="container-show-btnAdd">
+            <div class="showAddForm">
+               <h1>+</h1>
+            </div>
+        </section>
+
+        <section class="tableData">
+            <table>
+                <thead>
+                    <th>Terminology</th>
+                    <th>Meaning</th>
+                    <th>Functions</th>
+                </thead>
+            </table>
+
+            <tbody class="tableBody">
+
+            </tbody>
+
+        </section>
+
+    </div>
+  
+    <script src="./js/controller.js" type="module"></script>
+
+</body>
+</html>
