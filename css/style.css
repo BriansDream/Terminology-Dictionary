@@ -166,9 +166,9 @@
 
 .tableData table {
     width: 100%;
-
-
+    text-align: center;
 }
+
 
 .tableData th {
     background-color: rgb(82, 114, 255);
@@ -176,6 +176,33 @@
     color: white;
 }
 
-
-
 /* Last table */
+
+
+
+/* UpdateandDelete Style */
+
+.updateButton {
+    background-color: rgb(255, 231, 20);
+    border: none;
+    padding: 5px;
+    border-radius: 30px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.deleteButton {
+    background-color: rgb(255, 140, 94);
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+/* Last Update and Delete Style  */

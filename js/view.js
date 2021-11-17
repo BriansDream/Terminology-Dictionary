@@ -1,3 +1,5 @@
+
+
 const showFormAdd = () => { 
     const showAddForm = document.querySelector('.showAddForm');
     showAddForm.addEventListener('click', () => {
@@ -17,5 +19,18 @@ const closeFormAdd = () => {
         const addContainer = document.querySelector('.add-container');
         addContainer.setAttribute('hidden','hidden');
     })
+
+
 }
+
+
+// const showFormUpdate = () => {
+//     const updateButton = document.querySelector('.updateButton');
+//     updateButton.addEventListener('click', () => {
+//         alert('test');
+//     })
+// }
+
+
+
 export {showFormAdd,closeFormAdd};
