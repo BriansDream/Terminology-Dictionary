@@ -19,9 +19,6 @@
     text-align: center;
     margin: 0 auto;
     max-width: 1440px;
-
-
-
 }
 
 .search-container .inputFormSearch {
@@ -72,7 +69,7 @@
 /* Global Style */
 
 /* Add form animation */
-.animationForm {}
+
 
 
 /* Last animation add */
@@ -96,7 +93,11 @@
 .add-container .title {
     text-align: center;
     margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bolder;
 }
+
+
 
 
 .add-container .formAdd {
@@ -108,7 +109,7 @@
 .add-container .container-closeAdd {
     position: absolute;
     text-align: center;
-    background-color: rgb(46, 168, 46);
+    background-color: rgb(255, 88, 88);
     color: white;
     padding: 10px;
     cursor: pointer;
@@ -117,6 +118,51 @@
 }
 
 /* Last add form */
+
+
+/* Start Update Form */
+
+.updateData-container {
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 100%;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.updateData-container .title {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.updateData-container .formUpdate {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-closeUpdate {
+    background-color: rgb(255, 88, 88);
+    max-width: fit-content;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    color: white;
+}
+
+
+/* Last update form */
+
+
+
 
 /* Show btn Add */
 
@@ -162,6 +208,8 @@
     border-radius: 10px;
     margin: 0 auto;
     max-width: 1440px;
+    overflow: scroll;
+    max-height: 500px;
 }
 
 .tableData table {
@@ -176,6 +224,14 @@
     color: white;
 }
 
+.tableBody tr:nth-child(2n) {
+    background-color: rgb(190, 190, 190);
+    color: white;
+    font-weight: bolder;
+}
+
+
+
 /* Last table */
 
 
@@ -185,24 +241,81 @@
 .updateButton {
     background-color: rgb(255, 231, 20);
     border: none;
-    padding: 5px;
-    border-radius: 30px;
+    padding: 8px;
+    border-radius: 4px;
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    font-weight: bolder;
 
 }
 
 .deleteButton {
-    background-color: rgb(255, 140, 94);
+    background-color: rgb(255, 116, 61);
     border: none;
     color: white;
-    padding: 5px;
-    border-radius: 30px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bolder;
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
 }
 
+.btnUpdate {
+    background-color: rgb(31, 182, 31);
+}
+
 /* Last Update and Delete Style  */
+
+
+/* Start Footer */
+footer {
+
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    padding: 5px;
+    background-color: rgb(255, 217, 0);
+    z-index: -200;
+    margin-top: 20px;
+}
+
+footer .title {
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+/* Last Footer */
+
+
+@media screen and (max-width: 600px) {
+
+    .add-container,
+    .updateData-container {
+        padding: 20px;
+    }
+
+    .add-container .title,
+    .updateData-container .title {
+        font-size: 1em
+    }
+
+    .GlobalStyleInputForm,
+    .GlobalCTA {
+        font-size: 1em;
+    }
+
+    .GlobalCTA {
+        padding: 2px;
+    }
+
+    .tableData {
+        max-height: 400px;
+        overflow: scroll;
+    }
+
+}

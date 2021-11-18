@@ -2,6 +2,7 @@
 // Yang berhubungan dengan manipulasi data dan database
 
 
+
 // Key untuk webstorage
 const CACHE_KEY = 'CACHE_KEY';
 
@@ -25,9 +26,20 @@ const putDataStorage = function(data){
 
         HistoryData.unshift(data);
 
-        if(HistoryData > 3) {
-            HistoryData.pop();
-        }
+        // Sorting using Higher order function (default ascending)
+        HistoryData.sort((a,b) => {
+            let nameA = a.terminology;
+            let nameB = b.terminology;
+            if(nameA < nameB) {
+                return -1;
+            } 
+            if(nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        })
+
+      
 
         localStorage.setItem(CACHE_KEY,JSON.stringify(HistoryData));
 
@@ -49,13 +61,13 @@ const showDataStorage = () => {
 
 const renderDataStorage = () => {
     const HistoryData = showDataStorage();
-    
+ 
     // Show data from web storage into the UI
     let tableBody = document.querySelector('.tableBody');
     // agar tidak menampilkan data ganda
     tableBody.innerHTML = " ";
 
-    for (let data of HistoryData) {
+for(let index=0; index <= HistoryData.length-1; index++) {
 
         let row = document.createElement('tr');
         let tableData = document.createElement('td');
@@ -74,8 +86,8 @@ const renderDataStorage = () => {
         deleteButton.classList.add('updateAndDeleteButton');
         deleteButton.innerHTML = 'delete';
 
-        row.innerHTML = `<td> ${data.terminology} </td>`;
-        row.innerHTML += `<td> ${data.meaning} </td>`;
+        row.innerHTML = `<td> ${HistoryData[index].terminology} </td>`;
+        row.innerHTML += `<td> ${HistoryData[index].meaning} </td>`;
         tableData.appendChild(deleteButton);
         tableData.insertBefore(updateButton,deleteButton);
        
@@ -86,10 +98,11 @@ const renderDataStorage = () => {
         // when we create this button outside the function we can't get id data 1 by 1
         deleteButton.addEventListener('click', () => {
             
-            const dataID = data.id;
-                if(dataID == data.id) {
+            const dataID = HistoryData[index].id;
+                if(dataID == HistoryData[index].id) {
+                   
                     // way to accest index while using for of => [data]
-                    HistoryData.splice([data],1);
+                   HistoryData.splice(index,1);
                     if(checkWebStorage()) {
                         if(localStorage.getItem(CACHE_KEY) != null) {
                             localStorage.removeItem(CACHE_KEY);
@@ -103,38 +116,45 @@ const renderDataStorage = () => {
                     }
                    
                 }    
-        })
+        });
 
-    }
-   
+      
+        // if we create this function outside render, when data in storage are empty then it will error because there is no element updateButton
+        updateButton.addEventListener('click', () => {
+           
+            const updateDataContainer = document.querySelector('.updateData-container');
+            const inputUpdateTerminology = document.querySelector('.terminologyUpdateInput').value = `${HistoryData[index].terminology}`;
+            const inputUpdateMeaning = document.querySelector('.meaningUpdateInput').value = `${HistoryData[index].meaning}`;
+            updateDataContainer.removeAttribute('hidden');
+        
+            const formUpdate = document.querySelector('.formUpdate');
+            formUpdate.addEventListener('submit' , (event) => {
 
+                const inputUpdateTerminology = document.querySelector('.terminologyUpdateInput').value.toLowerCase();
+                const inputUpdateMeaning = document.querySelector('.meaningUpdateInput').value.toLowerCase();
     
-
+                const updateID = HistoryData[index].id;
+                
+                if(updateID == HistoryData[index].id) {
+                       HistoryData[index].terminology = inputUpdateTerminology;
+                       HistoryData[index].meaning = inputUpdateMeaning; 
+                       if(checkWebStorage()) {
+                           if(localStorage.getItem(CACHE_KEY) != null) {
+                               localStorage.removeItem(CACHE_KEY);
+                                location.reload();
+                                HistoryData.forEach((UpdateData) => {
+                                   putDataStorage(UpdateData);
+                                   renderDataStorage();
+                               })
+                           }
+                       }
+                }
+            });
+        });
+       
+    }
 }
 
-
-// const deleteData = () => {
-//     const deleteButton = document.querySelector('.deleteButton');
-//     deleteButton.addEventListener('click', () => {
-       
-//         let HistoryData = showDataStorage();
-    
-//     if(HistoryData != null || HistoryData != ''){
-        
-//         for(let index=0; index <= HistoryData.length-1; index++) {
-//                 const dataID = HistoryData[index].id;
-//                 console.log(dataID)
-
-
-//         }
-//     } else {
-//         alert('There is no data !!');
-//     }
-
-
-
-//     });
-// }
 
 
 export {putDataStorage, renderDataStorage};

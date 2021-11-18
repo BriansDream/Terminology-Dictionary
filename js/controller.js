@@ -1,4 +1,4 @@
-import { showFormAdd,closeFormAdd } from "./view.js";
+import { showFormAdd,closeFormAdd,closeFormUpdate } from "./view.js";
 import {putDataStorage, renderDataStorage} from "./model.js"
 import { EmptyInput } from "./classCollection.js";
 
@@ -55,7 +55,7 @@ const runFunction = () => {
     closeFormAdd();
     addDataFunct();
     renderDataStorage();
-  
+    closeFormUpdate();
   
 
 }

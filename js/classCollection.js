@@ -14,4 +14,6 @@ class EmptyInput extends Error {
 // Custom Event
 // Memungkinkan untuk menjalankan sebuah event handler setelah sebuah eventhandler lain selesai dipanggil.
 
+
+
 export {EmptyInput};

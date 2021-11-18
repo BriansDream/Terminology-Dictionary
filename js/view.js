@@ -23,14 +23,14 @@ const closeFormAdd = () => {
 
 }
 
+// Expression function
+const closeFormUpdate = function() {
+    const closeUpdate = document.querySelector('.container-closeUpdate');
+    closeUpdate.addEventListener('click', () => {
+       const containerUpdateData = document.querySelector('.updateData-container');
+       containerUpdateData.setAttribute('hidden','hidden');
+    })
+}
 
-// const showFormUpdate = () => {
-//     const updateButton = document.querySelector('.updateButton');
-//     updateButton.addEventListener('click', () => {
-//         alert('test');
-//     })
-// }
 
-
-
-export {showFormAdd,closeFormAdd};
+export {showFormAdd,closeFormAdd,closeFormUpdate};
