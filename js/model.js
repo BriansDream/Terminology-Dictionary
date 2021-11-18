@@ -74,9 +74,6 @@ for(let index=0; index <= HistoryData.length-1; index++) {
         let updateButton = document.createElement('button');
         let deleteButton = document.createElement('button');
 
-        row.style.cssText = `
-            font-size: 1.2em; 
-        `;
 
         updateButton.setAttribute('class','updateButton');
         updateButton.classList.add('updateButton');
@@ -157,4 +154,4 @@ for(let index=0; index <= HistoryData.length-1; index++) {
 
 
 
-export {putDataStorage, renderDataStorage};
+export {putDataStorage, renderDataStorage, showDataStorage};

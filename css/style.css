@@ -19,6 +19,7 @@
     text-align: center;
     margin: 0 auto;
     max-width: 1440px;
+
 }
 
 .search-container .inputFormSearch {
@@ -172,7 +173,6 @@
     left: 0;
     bottom: 0;
     position: fixed;
-
     z-index: -99;
 }
 
@@ -194,7 +194,7 @@
     left: 88%;
     cursor: pointer;
     color: white;
-    font-size: 2em;
+    font-size: 1.7em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -293,6 +293,25 @@ footer .title {
 
 
 @media screen and (max-width: 600px) {
+
+    .search-container {
+        padding: 1px;
+        margin-top: 11px;
+    }
+
+    .search-container .inputFormSearch {
+        font-size: 1em;
+    }
+
+    .search-container .btnForm {
+        font-size: 1em;
+    }
+
+    .container-show-btnAdd .showAddForm {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
 
     .add-container,
     .updateData-container {
