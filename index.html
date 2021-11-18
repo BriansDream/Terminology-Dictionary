@@ -15,9 +15,10 @@
         <!-- Section Search -->
         <section class="search-container">
             <form action="" class="search-form">
-                <input type="text" class="inputFormSearch" placeholder="what are u looking for?" maxlength="15">
+                <input type="text" class="inputFormSearch" placeholder="what are u looking for?" maxlength="15" required>
                 <input type="submit" class="btnForm" value="search">
             </form>
+            <h1 class="displaySearch">..</h1>
         </section>
         <!-- Last Section search -->
 
@@ -31,8 +32,8 @@
            
             </div>
             <form action="" class="formAdd" >
-                <input type="text" placeholder=" fill terminology.." class="inputAddTerminology GlobalStyleInputForm" maxlength="20">
-                <input type="text" placeholder="fill meaning..." maxlength="20" class="inputAddMeaning GlobalStyleInputForm">
+                <input type="text" placeholder=" fill terminology.." class="inputAddTerminology GlobalStyleInputForm" maxlength="25" required>
+                <input type="text" placeholder="fill meaning..." maxlength="25" class="inputAddMeaning GlobalStyleInputForm" required>
                 <input type="submit" value="save" class="btnAddInput GlobalCTA">
             </form>
 
@@ -42,6 +43,23 @@
 
         </section>
         <!-- Last add data -->
+
+
+        <!-- Form update data -->
+        <section class="updateData-container" hidden>
+            <div class="title">
+                <h1>update data terminology</h1>
+            </div>
+            <form action="" class="formUpdate">
+                <input type="text" placeholder="update terminology" class="terminologyUpdateInput GlobalStyleInputForm" required maxlength="25">
+                <input type="text" placeholder="update meaning" class="meaningUpdateInput GlobalStyleInputForm" required maxlength="25">
+                <input type="submit" value="update data" class="btnUpdate GlobalCTA">
+            </form>
+            <div class="container-closeUpdate">
+                <h1>X</h1>
+            </div>
+        </section>
+        <!-- Last update data -->
 
         <section class="container-show-btnAdd">
             <div class="showAddForm">
@@ -56,17 +74,21 @@
                     <th>Meaning</th>
                     <th>Functions</th>
                 </thead>
-            </table>
+      
 
             <tbody class="tableBody">
 
             </tbody>
-
+        </table>
         </section>
 
     </div>
   
     <script src="./js/controller.js" type="module"></script>
-
+  <footer>
+      <div class="title">
+   <p>&copy; Created by briansdream 2021</p>
+    </div>
+    </footer>
 </body>
 </html>
